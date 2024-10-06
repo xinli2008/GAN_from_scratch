@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Pytorch版本实现基本MNIST的生成对抗网络(仅供学习)
+Pytorch版本实现的基于MNIST的生成对抗网络(仅供学习)
 
 ## Preliminary
 
