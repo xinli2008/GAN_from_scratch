@@ -136,6 +136,9 @@ for epoch in range(args.num_epochs):
         # train discriminator
         optimizer_D.zero_grad()
         real_loss = loss_fn(discriminator(gt_images), labels_one)
+        # NOTE: detach的作用是什么?
+        # 在pytorch中, detach的作用是从计算图中分离张量, 使得该张量不参与梯度计算和反向传播。具体来说, detach()方法会返回一个与原张量相同数据的副本, 但该副本不会跟踪计算图。
+        # 这里使用detach的作用是确保生成器的参数不会在训练判别器时被更新。否则，生成器在判别器的训练步骤中也会被错误的更新, 干扰生成器和判别器的独立优化过程。
         fake_loss = loss_fn(discriminator(predicted_images.detach()), labels_zero)
         loss_d = real_loss + fake_loss
         loss_d.backward()

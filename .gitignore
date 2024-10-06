@@ -164,3 +164,4 @@ cython_debug/
 dataset
 saved_images/*
 saved_model/*
+demo.py

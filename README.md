@@ -11,7 +11,7 @@ Pytorch版本实现基本MNIST的生成对抗网络(仅供学习)
 ![gan](./assets/GAN_architecture.png)
 
 ## generated_images
-![generated_images](./assets/image_46413.png)
+![generated_images](./assets/output_image_with_labels.png)
 
 ## Acknowledgements
 
